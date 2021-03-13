@@ -1,0 +1,18 @@
+<!-- <p appHighlight [defaultColor]="'pink'">themes-changes works!</p>
+<p appHighlight> hello Ali Bouyahya</p> -->
+<p
+[ngClass]="{
+    theme1 : theme ==='theme1',
+    theme2 : theme ==='theme2',
+    theme3 : theme ==='theme3'}"
+>themes-changes works!</p>
+<button (click)="changetheme('theme1')" class="btn btn-primary">
+    Theme 1
+</button>
+
+<button (click)="changetheme('theme2')" class="btn btn-primary">
+    Theme 2
+</button>
+<button (click)="changetheme('theme3')" class="btn btn-primary">
+    Theme 3
+</button>

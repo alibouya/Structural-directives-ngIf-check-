@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ThemesChangesComponent } from './themes-changes/themes-changes.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ThemesChangesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
