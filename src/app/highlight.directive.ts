@@ -4,15 +4,16 @@ import { Directive,HostBinding, HostListener, Input } from '@angular/core';
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
-@Input() defaultColor = 'green';
-  @HostBinding('style.backgroundColor') bg='red';
+@Input() out = 'yellow';
+@Input() in = 'red';
+
+  @HostBinding('style.backgroundColor') bg=this.out;
   constructor() { }
   @HostListener('mouseenter') enter(){
-    alert(this.defaultColor);
-    this.bg= 'yellow';
+    this.bg= this.in;
   } 
   @HostListener('mouseleave') leave(){
-    this.bg= 'red';
+    this.bg= this.out;
   } 
 
 }

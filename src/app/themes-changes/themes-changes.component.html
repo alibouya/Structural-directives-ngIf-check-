@@ -1,11 +1,23 @@
 <!-- <p appHighlight [defaultColor]="'pink'">themes-changes works!</p>
 <p appHighlight> hello Ali Bouyahya</p> -->
-<p
+<input appRainbow type="text">
+<p appHighlight
+[in]="'orange'"
+[out]= "'purple'"
+>contenu</p>
+<p appHighlight
+[in]="'blue'"
+[out]= "'pink'"
 [ngClass]="{
     theme1 : theme ==='theme1',
     theme2 : theme ==='theme2',
     theme3 : theme ==='theme3'}"
 >themes-changes works!</p>
+<div 
+appHighlight
+[in]="'red'"
+[out]= "'yellowgreen'"
+>test apphikight</div>
 <button (click)="changetheme('theme1')" class="btn btn-primary">
     Theme 1
 </button>
