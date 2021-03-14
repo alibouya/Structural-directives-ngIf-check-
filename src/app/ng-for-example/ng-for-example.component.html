@@ -1,0 +1,12 @@
+<p>ng-for-example works!</p>
+<ol class="list-group">
+    <li *ngFor ="let name of names; let indice= index; 
+    let isFirst = first; let isLast= last; let isEven=even; let isOdd= odd;" 
+    class="list-group-item"
+    [ngClass]="{first : isFirst,
+        odd : isOdd ,
+        even: isEven && !isFirst,
+        last : isLast}">
+    {{indice+1}} {{name}}   
+    </li>
+</ol>
